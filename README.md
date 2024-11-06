@@ -21,8 +21,17 @@ Actors/Entities are inspired by the real world entities that can use the applica
 3. **Borrow** having attributes:
 * id (unique primary key) book_id (foreign key), patron_id (foreign key), borrowing date, return date.
 4. **UserInfo** having attributes:
-* id (unique primary key) id,name, email, password and role
+* id (unique primary key),name, email, password and role
 
 ## Authentication
 
 User has to store username and password manually(temporary solution). Password has to be encoded string.
+Step 1-> Either user can create an api to register the user
+or user can load password directly, eg:- "$2a$12$Q5UpOHzlXqI5vLr6ZZOLWuEghgvv88iP4a0vXCFba91N0ySRy556O" for "123456" password.
+Step 2-> call /api/authenticate API to get the token with following JSON body
+{
+"username":"Unais",
+"password":"123456"
+}
+
+step 3-> Once token is generated, user can hit other APIs by passing bearer token. As of now all the APIs are allowed to authenticate with this token. it can be configurable by adding different roles.
