@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "6618c37a-e8c2-4e15-8329-c51f22d662f0",
+		"name": "Library Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVbmFpcyIsImlhdCI6MTczMDkxMzE1NiwiZXhwIjoxNzMwOTE0OTU2fQ.AE4a4WaUUR8n2Mp749BfGoECa3JpP5k9HKKaia3lGtM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patron",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVbmFpcyIsImlhdCI6MTczMDkxMjUxNiwiZXhwIjoxNzMwOTE0MzE2fQ.mSpaaqdOhkErssfrLKAeN8vL9cuePOECFY9Ln3Q1ycA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/patrons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"patrons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Unais",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"Unais\",\r\n\"password\":\"123456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patron By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVbmFpcyIsImlhdCI6MTczMDkxMjUxNiwiZXhwIjoxNzMwOTE0MzE2fQ.mSpaaqdOhkErssfrLKAeN8vL9cuePOECFY9Ln3Q1ycA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/patrons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"patrons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVbmFpcyIsImlhdCI6MTczMDkxMjUxNiwiZXhwIjoxNzMwOTE0MzE2fQ.mSpaaqdOhkErssfrLKAeN8vL9cuePOECFY9Ln3Q1ycA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Books By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVbmFpcyIsImlhdCI6MTczMDkxMjUxNiwiZXhwIjoxNzMwOTE0MzE2fQ.mSpaaqdOhkErssfrLKAeN8vL9cuePOECFY9Ln3Q1ycA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Book3\",\r\n    \"description\": \"library book3\",\r\n    \"author\": \"Ayisha\",\r\n    \"isbn\": \"Fasal\",\r\n    \"publicationYear\": \"1970-01-01T00:00:02.023+00:00\",\r\n    \"quantity\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/books/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Patron By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVbmFpcyIsImlhdCI6MTczMDkxMjUxNiwiZXhwIjoxNzMwOTE0MzE2fQ.mSpaaqdOhkErssfrLKAeN8vL9cuePOECFY9Ln3Q1ycA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Fasal\",\r\n    \"address\": \"United Arab Emirates\",\r\n    \"phoneNumber\": \"9048242424\",\r\n    \"emailAddress\": \"fasal@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/patrons/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"patrons",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVbmFpcyIsImlhdCI6MTczMDkxMjUxNiwiZXhwIjoxNzMwOTE0MzE2fQ.mSpaaqdOhkErssfrLKAeN8vL9cuePOECFY9Ln3Q1ycA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Book3\",\r\n    \"description\":\"library book3\",\r\n    \"author\":\"Ayisha\",\r\n    \"isbn\":\"Fasal\",\r\n    \"publicationYear\":\"2023\",\r\n    \"quantity\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrow Patrons",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVbmFpcyIsImlhdCI6MTczMDkxMjUxNiwiZXhwIjoxNzMwOTE0MzE2fQ.mSpaaqdOhkErssfrLKAeN8vL9cuePOECFY9Ln3Q1ycA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Book3\",\r\n    \"description\":\"library book3\",\r\n    \"author\":\"Ayisha\",\r\n    \"isbn\":\"Fasal\",\r\n    \"publicationYear\":\"2023\",\r\n    \"quantity\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/borrow/3/patron/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"borrow",
+						"3",
+						"patron",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Patron",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVbmFpcyIsImlhdCI6MTczMDkxMjUxNiwiZXhwIjoxNzMwOTE0MzE2fQ.mSpaaqdOhkErssfrLKAeN8vL9cuePOECFY9Ln3Q1ycA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Fasal\",\r\n    \"address\":\"United Arab Emirates\",\r\n    \"phoneNumber\":\"9048242424\",\r\n    \"emailAddress\":\"fasal62@gmail.com\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/patrons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"patrons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVbmFpcyIsImlhdCI6MTczMDkxMjUxNiwiZXhwIjoxNzMwOTE0MzE2fQ.mSpaaqdOhkErssfrLKAeN8vL9cuePOECFY9Ln3Q1ycA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Book3\",\r\n    \"description\":\"library book3\",\r\n    \"author\":\"Ayisha\",\r\n    \"isbn\":\"Fasal\",\r\n    \"publicationYear\":\"2023\",\r\n    \"quantity\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/books/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Patron",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVbmFpcyIsImlhdCI6MTczMDkxMjUxNiwiZXhwIjoxNzMwOTE0MzE2fQ.mSpaaqdOhkErssfrLKAeN8vL9cuePOECFY9Ln3Q1ycA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Book3\",\r\n    \"description\":\"library book3\",\r\n    \"author\":\"Ayisha\",\r\n    \"isbn\":\"Fasal\",\r\n    \"publicationYear\":\"2023\",\r\n    \"quantity\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/patrons/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"patrons",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Patrons",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVbmFpcyIsImlhdCI6MTczMDkxMjUxNiwiZXhwIjoxNzMwOTE0MzE2fQ.mSpaaqdOhkErssfrLKAeN8vL9cuePOECFY9Ln3Q1ycA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Fasal\",\r\n    \"address\": \"United Arab Emirates\",\r\n    \"phoneNumber\": \"9048242424\",\r\n    \"emailAddress\": \"fasal@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/return/3/patron/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"return",
+						"3",
+						"patron",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
